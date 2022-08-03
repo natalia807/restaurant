@@ -1,0 +1,71 @@
+// importar poppins
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+// Resetar arquivo css
+
+body {
+  background: @bg-color;
+
+  font-family: "Poppins", sans-serif;
+
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+.primary-button {
+  background: @pink;
+  border-radius: 8px;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 35px;
+}
+
+.secondary-button {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid black;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 35px;
+}
+
+input[type="text"] {
+  height: 47px;
+  border-radius: 8px;
+  border: 1px solid @dark-grey;
+  color: @dark-grey;
+  padding: 0 15px;
+
+  &.error {
+    border: 1px solid @error-color;
+
+    &::placeholder {
+      color: @error-color;
+    }
+  }
+}
+
+textarea {
+  padding: 15px;
+}
+
+@media @tablets {
+  body {
+    background: white;
+  }
+}
